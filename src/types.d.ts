@@ -7,3 +7,9 @@ export interface Todo {
 export type TodoId = Pick<Todo, 'id'>
 
 export type ListOfTodos = Todo[]
+
+export type FilterValue = typeof TODO_FILTERS[keyof typeof TODO_FILTERS]
+
+export interface TodoTitle {
+    title: string
+}

@@ -9,7 +9,7 @@ interface Props  extends TodoType {
 
 export const Todo: React.FC<Props> = ({ id, title, completed, onRemove, onToggleCompleted }) => {
     return (
-        <div>
+        <div className="view">
             <input className="toggle" type="checkbox" checked={completed} onChange={(e) => onToggleCompleted({id, completed: e.target.checked})} />
             <label >{title}</label>
             <button className="destroy" onClick={() => onRemove({id})} />
